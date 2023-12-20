@@ -7,3 +7,10 @@ def home(request):
         "test": "TEST",
     }
     return render(request, "core/home.html", context=context)
+
+
+def something_cool(request):
+    context = {
+        "test": "something_cool",
+    }
+    return render(request, "core/something_cool.html", context=context)
