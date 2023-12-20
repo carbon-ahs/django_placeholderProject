@@ -25,7 +25,12 @@ SECRET_KEY = "django-insecure-!#ol=+oh9qrij8u^13uuaw04n3&^t*!3@ri#7k0c_^#gt_ncm5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "axiagroups.com",
+    "www.axiagroups.com",
+    "http://axiagroups.com/",
+    "*",
+]
 
 
 # Application definition
@@ -42,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -119,9 +125,12 @@ USE_TZ = True
 MEDIA_ROOT = BASE_DIR / "media"
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_ROOT = "/static/"
+STATIC_DIR = BASE_DIR / "static"
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

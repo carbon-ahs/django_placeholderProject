@@ -38,12 +38,15 @@
         </style>
     </head>
 <body>
-    <div class="hero-image"></div>
     <div class="container">
-        <h1 class="heading">We Are Cooking Something Cool!</h1>
-        <p class="subheading">Stay tuned for the delicious reveal...</p>
+        <div class="row">
+            <h1 class="heading">We Are Cooking Something Cool!</h1>
+            <p class="subheading">Stay tuned for the delicious reveal...</p>
+            <!-- <img src="{% static 'assets\img\something_cool_full_img.png' %}" class="center"> -->
+        </div>
     </div>
-    
+    <div class="hero-image"></div>
+    {% comment %} http://127.0.0.1:8000{% static 'assets\img\something_cool.png' %} {% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU2lP2+XkphS9a5vUgtI1rj4KxrRLdqAMOdlt+omzW1kH6j7+yBuYoc3G8IAQ" crossorigin="anonymous"></script>
 </body>
 </html>
