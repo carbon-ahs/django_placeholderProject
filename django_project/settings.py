@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core",
+    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
@@ -71,7 +72,8 @@ DATABASES = {
     }
 }
 
-
+# User Auth
+AUTH_USER_MODEL = "accounts.CustomUser"
 # Password validation
 
 AUTH_PASSWORD_VALIDATORS = [
