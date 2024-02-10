@@ -2,6 +2,7 @@
 Django settings for django_project project.
 It is a boilerplate project.
 """
+
 # -*- coding: utf-8 -*-
 
 from pathlib import Path
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "drf_yasg",
     "debug_toolbar",
     "core",
     "accounts.apps.AccountsConfig",
