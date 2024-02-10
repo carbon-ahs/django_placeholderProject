@@ -35,12 +35,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "drf_yasg",
     "debug_toolbar",
+    "corsheaders",
     "core",
     "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -84,6 +86,11 @@ DATABASES = {
 # User Auth
 AUTH_USER_MODEL = "accounts.CustomUser"
 # Password validation
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://127.0.0.1:3000",
+]
 
 AUTH_PASSWORD_VALIDATORS = [
     {
