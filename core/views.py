@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.conf import settings
 from django.views.generic import TemplateView
 
 
@@ -12,9 +11,15 @@ def home(request):
 
 
 def something_cool(request):
+    """This function does something.
+
+    :param arg1: The first argument.
+    :param arg2: The second argument.
+    :return: The result of the operation.
+    """
+    # Do something
     context = {
         "test": "something_cool",
-        "static": settings.STATICFILES_DIRS[0],
     }
     return render(request, "core/something_cool.html", context=context)
 

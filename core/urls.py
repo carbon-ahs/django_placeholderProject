@@ -7,5 +7,5 @@ from core import views
 
 urlpatterns = [
     path("", views.something_cool, name="something_cool"),
-    path("test", views.home, name="home"),
+    path("test/", views.home, name="home"),
 ]
