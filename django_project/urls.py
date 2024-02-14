@@ -25,6 +25,8 @@ urlpatterns = [
     # ------------------------
     # Debug toolbar
     path("__debug__/", include("debug_toolbar.urls")),
+    # drf
+    path("api-auth/", include("rest_framework.urls")),
     # Swagger
     path(
         "swagger<format>/", schema_view.without_ui(cache_timeout=0), name="schema-json"
